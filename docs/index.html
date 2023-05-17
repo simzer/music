@@ -1,52 +1,65 @@
-<!DOCTYPE html> 
+<!DOCTYPE html> 
  <html> 
   
  <head> 
-     <meta charset="utf-8" /> 
-     <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script> 
+    <meta charset="utf-8" /> 
+    <title>Simzer music & XMMS skins</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script> 
  </head> 
-  
+
  <body> 
-     <div id="app" style="height: 100vh"> 
-         <!-- Webamp will attempt to center itself within this div --> 
-     </div> 
-     <script> 
-         const Webamp = window.Webamp; 
+     <div id="app" style="height: 100vh"> 
+         <!-- Webamp will attempt to center itself within this div --> 
+     </div> 
+     <script> 
+         const Webamp = window.Webamp; 
          const webamp = new Webamp({ 
-             initialTracks: [ 
-                 { 
-                     metaData: { 
+             initialTracks: [ 
+                 { 
+                     metaData: { 
                          artist: "Simzer", 
                          title: "Cyberjana" 
-                     }, 
-                     url: "cybe`jana.mp3", 
-                     duration: 1.28 
-                 }, 
-                 { 
-                     metaData: { 
+                     }, 
+                     url: "Cybe`jana.mp3", 
+                     duration: 1.28 
+                 }, 
+                 { 
+                     metaData: { 
                          artist: "Simzer", 
                          title: "India" 
-                     }, 
+                     }, 
                      url: "13_IndiaOK.mp3", 
-                     duration: 4.16
-                 }, 
-                 { 
-                     metaData: { 
+                     duration: 4.16
+                 }, 
+                 { 
+                     metaData: { 
                          artist: "Simzer", 
                          title: "Slow" 
-                     }, 
+                     }, 
                      url: "03_Slow.mp3", 
-                     duration: 12.42 
-                 }
-             ],
+                     duration: 12.42 
+                 }
+             ],
              availableSkins: [
-                { url: "ATER-Blue.wsz", name: "ATER-Blue" }
-             ]
+                { url: "skins/ATER-Blue.wsz", name: "ATER-Blue" },
+                { url: "skins/ATER-Green.wsz", name: "ATER-Green" },
+                { url: "skins/ATER-Red.wsz", name: "ATER-Red" },
+                { url: "skins/ATER-White.wsz", name: "ATER-White" },
+                { url: "skins/ATER-Yellow.wsz", name: "ATER-Yellow" },
+                { url: "skins/Almond_alu_rounded.wsz", name: "Almond_alu_rounded" },
+                { url: "skins/Almond_darkblue_rounded.wsz", name: "Almond_darkblue_rounded" },
+                { url: "skins/Almond_darkorange_rounded.wsz", name: "Almond_darkorange_rounded" },
+                { url: "skins/Almond_steel_rounded.wsz", name: "Almond_steel_rounded" }
+             ],
+             initialSkin: { 
+                     url: "skins/ATER-Blue.wsz", 
+             }
          }); 
   
-         // Returns a promise indicating when it's done loading. 
-         webamp.renderWhenReady(document.getElementById('app')); 
-     </script> 
+         // Returns a promise indicating when it's done loading. 
+         webamp.renderWhenReady(document.getElementById('app')); 
+     </script> 
  </body> 
   
  </html>
